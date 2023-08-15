@@ -35,3 +35,10 @@
 .carousel-item{
     height: 30vw;
 }
+.card-text{
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 3;
+}
