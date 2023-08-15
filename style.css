@@ -1,0 +1,37 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#header{
+    height: 5.9vw;
+    background-color: #39FF14;
+}
+#logo{
+    width: 28.403vw;
+    height: fit-content;
+}
+#nav{
+    height: 3.819vw;
+    background-color: #000;
+    position: sticky;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto auto;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    column-gap: 5vw;
+}
+#nav a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.302vw;
+    font-weight: 600;
+}
+#carouselExampleAutoplaying{
+    padding-top: 4vw;
+    padding-bottom: 4vw;
+}
+.carousel-item{
+    height: 30vw;
+}
