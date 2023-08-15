@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 #header{
-    height: 5.9vw;
+    height: 6.5vw;
     background-color: #39FF14;
 }
 #logo{
@@ -12,7 +12,7 @@
     height: fit-content;
 }
 #nav{
-    height: 3.819vw;
+    height: 2.7vw;
     background-color: #000;
     position: sticky;
     display: grid;
@@ -41,4 +41,22 @@
     overflow: hidden;
     text-overflow: ellipsis;
     -webkit-line-clamp: 3;
+}
+#footer{
+    height: 5.9vw;
+    background-color: #39FF14;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: #000 0.8vw solid;
+    color: #000;
+    box-sizing: content-box;
+}
+#footer p{
+    font-size: 1.302vw;
+    font-weight: 600;
+}
+#footer a{
+    color: #000;
+    text-decoration: underline;
 }
