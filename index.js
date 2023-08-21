@@ -4,12 +4,6 @@ async function getPostagens() {
     return data;
 }
 
-async function getPostagem(id) {
-    const response = await fetch(`https://api-rest-post-diegocandido.herokuapp.com/postagem/${id}`);
-    const data = await response.json();
-    return data;
-}
-
 async function carousel(){
     const postagens = await getPostagens();
     const carousel = document.querySelector('#carousel-inner');
@@ -53,7 +47,7 @@ async function postagens(){
                     <h3 class="mb-0">${postagens[i].title}</h3>
                     <div class="mb-1 text-muted">${postagens[i].postDate}</div>
                     <p class="card-text mb-auto">${postagens[i].description}</p>
-                    <a href="#" class="stretched-link">Continue lendo</a>
+                    <a href='post.html?id=${i}' class="stretched-link">Continue lendo</a>
                     </div>
                     <div class="col-auto d-none d-lg-block">
                         <img src="https://api-rest-post-diegocandido.herokuapp.com${postagens[i].thumbImage}" alt="${postagens[i].thumbImageAltText}" class="img-fluid" style="width: 200px; height: 250px;">
@@ -66,6 +60,12 @@ async function postagens(){
         }
         postagensContainer.appendChild(postagemRow);
     }while(i<postagens.length)
+}
+
+async function openPostagem(id) {
+    const postagem = await getPostagem(id);
+    const url = `post.html?id=${id}`; // Substitua URL_DA_PAGINA_EXTERNAL pela URL real da página externa
+    window.open(url, '_blank');
 }
 
 carousel();
