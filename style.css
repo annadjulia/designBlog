@@ -60,3 +60,7 @@
     color: #000;
     text-decoration: underline;
 }
+#post img{
+    width: 40vw;
+    height: auto;
+}

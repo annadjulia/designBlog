@@ -15,11 +15,13 @@ async function carousel(){
             carouselItem.classList.add('active');
         }
         carouselItem.innerHTML = `
+        <a href='post.html?id=${count}' class="stretched-link">
             <img class="d-block w-100 img-fluid" src="https://api-rest-post-diegocandido.herokuapp.com${postagem.thumbImage}" alt="First slide">
             <div class="carousel-caption d-none d-md-block p-2 rounded" style="background-color: rgba(0, 0, 0, 0.7);">
                 <h5>${postagem.title}</h5>
                 <p>${postagem.description}</p>
             </div>
+        </a>
         `;
         carousel.appendChild(carouselItem);
         count++;
@@ -50,8 +52,7 @@ async function postagens(){
                     <a href='post.html?id=${i}' class="stretched-link">Continue lendo</a>
                     </div>
                     <div class="col-auto d-none d-lg-block">
-                        <img src="https://api-rest-post-diegocandido.herokuapp.com${postagens[i].thumbImage}" alt="${postagens[i].thumbImageAltText}" class="img-fluid" style="width: 200px; height: 250px;">
-            
+                        <img src="https://api-rest-post-diegocandido.herokuapp.com${postagens[i].thumbImage}" alt="${postagens[i].thumbImageAltText}" class="img-fluid rounded-end" style="width: 200px; height: 250px;">
                     </div>
                 </div>
             `;
