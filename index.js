@@ -43,7 +43,7 @@ async function postagens(){
             const postagemCol = document.createElement('div');
             postagemCol.classList.add('col-md-6');
             postagemCol.innerHTML = `
-                <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative post">
                     <div class="col p-4 d-flex flex-column position-static">
                     <strong class="d-inline-block mb-2 text-primary">${postagens[i].thumbImageAltText}</strong>
                     <h3 class="mb-0">${postagens[i].title}</h3>
@@ -52,7 +52,7 @@ async function postagens(){
                     <a href='post.html?id=${i}' class="stretched-link">Continue lendo</a>
                     </div>
                     <div class="col-auto d-none d-lg-block">
-                        <img src="https://api-rest-post-diegocandido.herokuapp.com${postagens[i].thumbImage}" alt="${postagens[i].thumbImageAltText}" class="img-fluid rounded-end" style="width: 200px; height: 250px;">
+                        <img src="https://api-rest-post-diegocandido.herokuapp.com${postagens[i].thumbImage}" alt="${postagens[i].thumbImageAltText}" class="img-fluid rounded" style="width: 200px; height: 250px;">
                     </div>
                 </div>
             `;
